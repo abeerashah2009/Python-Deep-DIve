@@ -1,0 +1,14 @@
+Test 1: Positive number
+Enter a number: Positive
+
+Test 2: Negative number
+Enter a number: Negative
+
+Test 3: Zero
+Enter a number: Zero
+
+Test 4: Decimal number
+Positive
+
+Test 5: Invalid input
+Enter a number: Invalid number

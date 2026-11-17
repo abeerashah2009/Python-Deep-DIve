@@ -1,0 +1,5 @@
+Case Study: Incorrect condition order
+Score: 95
+Grade: C
+
+Explanation: The first true condition is selected.

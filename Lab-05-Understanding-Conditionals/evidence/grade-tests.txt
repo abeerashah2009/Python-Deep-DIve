@@ -1,0 +1,17 @@
+Test 1: Interactive score 85
+Enter your score: Grade: B
+
+Test 2: Grade boundaries
+Score: 95
+Grade: A
+Score: 80
+Grade: B
+Score: 70
+Grade: C
+Score: 60
+Grade: D
+Score: 59
+Grade: F
+
+Test 3: Invalid score
+Invalid score
