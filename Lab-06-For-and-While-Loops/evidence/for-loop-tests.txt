@@ -1,0 +1,9 @@
+Test 1: Print numbers from 1 to 5
+1
+2
+3
+4
+5
+
+Test 2: Verify the last printed number
+5

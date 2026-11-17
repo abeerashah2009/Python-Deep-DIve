@@ -1,0 +1,5 @@
+Test 1: Sum numbers until total exceeds 20
+Final total: 21
+
+Test 2: Verify the final total
+Final total: 21
