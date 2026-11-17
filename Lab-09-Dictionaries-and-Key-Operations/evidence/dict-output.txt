@@ -1,0 +1,12 @@
+{'name': 'Alice', 'age': 30, 'city': 'New York'}
+User's Name: Alice
+Updated User Profile: {'name': 'Alice', 'age': 31, 'city': 'New York'}
+Email: not set
+KeyError for missing key: 'email'
+Removed value: New York
+Profile after removing city: {'name': 'Alice', 'age': 31}
+Verified: 'city' is not in user_profile
+name: Alice
+age: 31
+Key: name
+Key: age
