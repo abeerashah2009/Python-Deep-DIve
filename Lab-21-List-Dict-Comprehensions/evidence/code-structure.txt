@@ -1,0 +1,8 @@
+2:squares = [x**2 for x in range(10)]
+6:even_squares = [x**2 for x in range(10) if x % 2 == 0]
+10:words = ["apple", "banana", "cherry", "date"]
+11:lengths = {word: len(word) for word in words}
+15:long_words = {word: len(word) for word in words if len(word) > 4}
+19:squares_loop = []
+20:for x in range(10):
+23:squares_comp = [x**2 for x in range(10)]
