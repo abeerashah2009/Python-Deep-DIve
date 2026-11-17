@@ -1,0 +1,7 @@
+1:class Car:
+2:    def __init__(self, make, model, year):
+7:    def describe_car(self):
+11:class ElectricCar(Car):
+12:    def __init__(self, make, model, year, battery_size=75):
+16:    def describe_battery(self):
+19:    def describe_car(self):

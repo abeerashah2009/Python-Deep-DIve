@@ -1,0 +1,3 @@
+2022 Tesla Model S
+This car has a 75-kWh battery.
+All checks passed.
