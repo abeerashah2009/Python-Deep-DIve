@@ -1,0 +1,6 @@
+{'id': '1', 'name': 'Alice', 'city': 'Karachi', 'score': '88'}
+{'id': '2', 'name': 'Bob', 'city': 'Lahore', 'score': '92'}
+{'id': '3', 'name': 'Carol', 'city': 'Islamabad', 'score': '75'}
+{'id': '4', 'name': 'Dave', 'city': 'Peshawar', 'score': '81'}
+{'id': '5', 'name': 'Eve', 'city': 'Quetta', 'score': '95'}
+Records: 5

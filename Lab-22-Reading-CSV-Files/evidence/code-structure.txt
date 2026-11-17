@@ -1,0 +1,7 @@
+read_csv.py:1:import csv
+read_csv.py:6:with open(file_path, mode='r', newline='') as file:
+read_csv.py:7:    csv_reader = csv.DictReader(file)
+read_csv.py:9:        data_list.append(row)
+read_noheader.py:1:import csv
+read_noheader.py:3:with open('noheader.csv', mode='r', newline='') as file:
+read_noheader.py:4:    csv_reader = csv.reader(file)
