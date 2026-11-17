@@ -1,0 +1,2 @@
+Enter a number: Result is: 5.0
+Done.

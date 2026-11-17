@@ -1,0 +1,2 @@
+Enter a number: Error: Division by zero is undefined!
+Done.
