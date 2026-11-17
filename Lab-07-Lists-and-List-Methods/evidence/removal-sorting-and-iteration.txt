@@ -1,0 +1,14 @@
+Task 3: Remove a Fruit by Name
+List after removing 'banana': ['apple', 'cherry', 'orange']
+'grape' not in list, nothing removed
+
+Task 3: Test ValueError for a Missing Item
+ValueError: list.remove(x): x not in list
+
+Task 4: Sort the List
+Sorted list of fruits: ['apple', 'cherry', 'orange']
+
+Task 5: Iterate Over the List
+Fruit: apple
+Fruit: cherry
+Fruit: orange

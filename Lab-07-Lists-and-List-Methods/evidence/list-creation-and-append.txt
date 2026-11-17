@@ -1,0 +1,5 @@
+Task 1: Create a List of Fruits
+Initial list of fruits: ['apple', 'banana', 'cherry']
+
+Task 2: Append a New Fruit
+List after appending 'orange': ['apple', 'banana', 'cherry', 'orange']
