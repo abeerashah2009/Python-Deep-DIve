@@ -1,0 +1,8 @@
+Addition: -7 + 2 = -5
+Subtraction: -7 - 2 = -9
+Multiplication: -7 * 2 = -14
+Division: -7 / 2 = -3.5
+Integer Division: -7 // 2 = -4
+Modulus: -7 % 2 = 1
+divmod(-7, 2) = (-4, 1)
+Exponent: -7 ** 2 = 49

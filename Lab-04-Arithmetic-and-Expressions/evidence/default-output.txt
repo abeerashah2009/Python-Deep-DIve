@@ -1,0 +1,8 @@
+Addition: 17 + 5 = 22
+Subtraction: 17 - 5 = 12
+Multiplication: 17 * 5 = 85
+Division: 17 / 5 = 3.4
+Integer Division: 17 // 5 = 3
+Modulus: 17 % 5 = 2
+divmod(17, 5) = (3, 2)
+Exponent: 17 ** 5 = 1419857

@@ -1,0 +1,5 @@
+Addition: 7 + 0 = 7
+Subtraction: 7 - 0 = 7
+Multiplication: 7 * 0 = 0
+Cannot divide by zero: division, //, % and divmod are undefined.
+Exponent: 7 ** 0 = 1
