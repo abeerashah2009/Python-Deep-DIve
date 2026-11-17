@@ -1,0 +1,1 @@
+{"status": "ok", "name": "demo-api", "version": 1, "repos": ["alpha", "beta"]}

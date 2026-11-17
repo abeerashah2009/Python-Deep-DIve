@@ -1,0 +1,14 @@
+get.py:1:import requests
+get.py:3:response = requests.get("http://localhost:8000/data.json", timeout=10)
+get.py:4:response.raise_for_status()
+get.py:5:print(response.status_code)
+get.py:6:print(response.headers["content-type"])
+parse.py:1:import requests
+parse.py:3:response = requests.get("http://localhost:8000/data.json", timeout=10)
+parse.py:4:response.raise_for_status()
+parse.py:5:response_data = response.json()
+parse.py:7:print(response_data["status"], response_data["name"])
+repos.py:1:import requests
+repos.py:3:data = requests.get("http://localhost:8000/data.json", timeout=10).json()
+repos.py:4:print("status:", data["status"])
+repos.py:5:print("repos:", ", ".join(data["repos"]))

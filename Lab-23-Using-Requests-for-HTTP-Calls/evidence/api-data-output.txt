@@ -1,0 +1,2 @@
+status: ok
+repos: alpha, beta
