@@ -1,0 +1,4 @@
+Debug: Adding 5 Total so far: 5
+Debug: Adding 10 Total so far: 15
+Debug: Adding 15 Total so far: 30
+Final Sum: 30

@@ -1,0 +1,17 @@
+> /home/ubuntu/Python-Deep-DIve/Lab-15-Basic-Debugging-Techniques/divide.py(3)divide_numbers()
+-> result = a / b
+(Pdb) 10
+(Pdb) 0
+(Pdb) Traceback (most recent call last):
+  File "/home/ubuntu/Python-Deep-DIve/Lab-15-Basic-Debugging-Techniques/divide.py", line 7, in <module>
+    divide_numbers(10, 0)
+  File "/home/ubuntu/Python-Deep-DIve/Lab-15-Basic-Debugging-Techniques/divide.py", line 3, in divide_numbers
+    result = a / b
+             ^
+  File "/usr/lib/python3.12/bdb.py", line 90, in trace_dispatch
+    return self.dispatch_line(frame)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/bdb.py", line 115, in dispatch_line
+    if self.quitting: raise BdbQuit
+                      ^^^^^^^^^^^^^
+bdb.BdbQuit

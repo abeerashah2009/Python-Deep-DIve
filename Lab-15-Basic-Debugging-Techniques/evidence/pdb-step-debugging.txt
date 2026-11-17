@@ -1,0 +1,13 @@
+> /home/ubuntu/Python-Deep-DIve/Lab-15-Basic-Debugging-Techniques/divide.py(3)divide_numbers()
+-> result = a / b
+(Pdb) (10, 0)
+(Pdb) ZeroDivisionError: division by zero
+> /home/ubuntu/Python-Deep-DIve/Lab-15-Basic-Debugging-Techniques/divide.py(3)divide_numbers()
+-> result = a / b
+(Pdb) Traceback (most recent call last):
+  File "/home/ubuntu/Python-Deep-DIve/Lab-15-Basic-Debugging-Techniques/divide.py", line 7, in <module>
+    divide_numbers(10, 0)
+  File "/home/ubuntu/Python-Deep-DIve/Lab-15-Basic-Debugging-Techniques/divide.py", line 3, in divide_numbers
+    result = a / b
+             ~~^~~
+ZeroDivisionError: division by zero
