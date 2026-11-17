@@ -1,0 +1,12 @@
+The factorial of 5 is: 120
+Factorials of 0..7: [1, 1, 2, 6, 24, 120, 720, 5040]
+The factorial of 5 using iteration is: 120
+Recursive equals iterative: True
+The factorial of 5 using tail recursion is: 120
+Recursion limit: 1000
+RecursionError: maximum recursion depth exceeded
+Tail recursion also fails: maximum recursion depth exceeded
+Iterative factorial(5000) has 54233 bits
+Matches math.factorial: True
+Three methods for 5: 120 120 120
+factorial(1500) works with limit 2000: True

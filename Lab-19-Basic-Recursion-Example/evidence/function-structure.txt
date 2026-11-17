@@ -1,0 +1,5 @@
+1:import math
+2:import sys
+6:def factorial(n):
+20:def iterative_factorial(n):
+33:def tail_recursive_factorial(n, accumulator=1):
