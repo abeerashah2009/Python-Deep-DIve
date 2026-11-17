@@ -1,0 +1,17 @@
+Python version:
+Python 3.12.3
+
+Virtual environment 1:
+2.32.3
+
+Virtual environment 2:
+2.32.3
+
+System Python:
+2.31.0
+
+Environment 1 executable:
+/home/ubuntu/my_project/myenv/bin/python
+
+Environment 2 executable:
+/home/ubuntu/my_project/myenv2/bin/python

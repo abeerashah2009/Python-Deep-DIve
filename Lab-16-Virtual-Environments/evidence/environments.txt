@@ -1,0 +1,2 @@
+drwxrwxr-x 5 ubuntu ubuntu 4096 Nov 17 12:10 /home/ubuntu/my_project/myenv
+drwxrwxr-x 5 ubuntu ubuntu 4096 Nov 17 12:12 /home/ubuntu/my_project/myenv2
