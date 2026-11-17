@@ -1,0 +1,8 @@
+Initial Set: {1, 2, 3, 4, 5}
+Set after adding duplicate: {1, 2, 3, 4, 5}
+Length unchanged: 5
+Union: {1, 2, 3, 4, 5, 6, 7}
+Intersection: {4, 5}
+Difference: {1, 2, 3}
+Error: unhashable type: 'list'
+Tuple in set: {3, (1, 2)}
