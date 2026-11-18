@@ -1,0 +1,9 @@
+Lab 27 - Python Syntax Verification
+
+Command:
+python3 -m py_compile ctx.py ctx_exc.py ctx_gen.py
+
+Result:
+Syntax check exit code: 0
+
+All three Python scripts passed syntax verification.

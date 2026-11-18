@@ -1,0 +1,11 @@
+Lab 27 - Context Managers (with Statement)
+
+LMS Assessment:
+Status: Passed
+Score: 100/100
+
+Total Time: 12h 14m
+Time Spent Today: 41m
+
+Result:
+All LMS practical tasks completed successfully.

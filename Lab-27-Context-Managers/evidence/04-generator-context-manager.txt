@@ -1,0 +1,13 @@
+Lab 27 - Generator-Based Context Manager
+
+Command:
+python3 ctx_gen.py
+
+Output:
+Enter
+Body
+Exiting
+
+Result:
+The contextlib.contextmanager decorator was used.
+The finally block ensured cleanup.

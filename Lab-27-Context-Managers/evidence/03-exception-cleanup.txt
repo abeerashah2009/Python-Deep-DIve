@@ -1,0 +1,14 @@
+Lab 27 - Cleanup During an Exception
+
+Command:
+python3 ctx_exc.py
+
+Output:
+Enter
+Body
+Exiting, exception: ValueError
+Caught outside: boom
+
+Result:
+The __exit__() method executed even though a ValueError occurred.
+The exception propagated because __exit__() returned False.

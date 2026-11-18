@@ -1,0 +1,15 @@
+Lab 27 - Custom Context Manager
+
+Command:
+python3 ctx.py
+
+Output:
+Entering the context and allocating resources.
+Running within the context block.
+Exiting the context and cleaning up resources.
+
+Verification:
+python3 ctx.py | grep -c Exiting
+
+Output:
+1

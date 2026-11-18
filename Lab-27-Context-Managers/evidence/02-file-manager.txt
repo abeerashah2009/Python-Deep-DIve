@@ -1,0 +1,16 @@
+Lab 27 - FileManager Context Manager
+
+Command:
+python3 ctx.py
+
+FileManager output:
+Opening file
+Writing
+Exiting: closing file
+File closed: True
+
+File content:
+Hello, World!
+
+Cleanup count after both with blocks:
+2
