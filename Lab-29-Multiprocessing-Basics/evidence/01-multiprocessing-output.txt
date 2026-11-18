@@ -1,0 +1,7 @@
+Parent pid: 19072
+Sum of the list is: 499999500000 (pid 19072)
+Sum of the list is: 499999500000 (pid 19072)
+Sequential time: 0.025s
+Sum of the list is: 499999500000 (pid 19080)
+Sum of the list is: 499999500000 (pid 19081)
+Multiprocessing time: 0.135s
