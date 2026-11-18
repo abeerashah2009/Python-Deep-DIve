@@ -1,0 +1,12 @@
+Test 1: Custom name
+Hello, Alice!
+
+Test 2: Default name
+Hello, Stranger!
+
+Test 3: Count 2
+Hello, Alice!
+Hello, Alice!
+
+Test 4: Executable script
+Hello, Bob!

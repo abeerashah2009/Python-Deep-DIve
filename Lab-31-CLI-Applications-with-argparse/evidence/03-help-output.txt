@@ -1,0 +1,8 @@
+usage: greet.py [-h] [--name NAME] [--count {1,2,3}]
+
+A simple greeting application.
+
+options:
+  -h, --help       show this help message and exit
+  --name NAME      The name of the person to greet.
+  --count {1,2,3}  How many times to greet (default: 1).

@@ -1,0 +1,2 @@
+Syntax exit code: 0
+-rwxrwxr-x 1 ubuntu ubuntu 528 Nov 18 14:13 greet.py

@@ -1,0 +1,9 @@
+Test 1: Unknown argument
+usage: greet.py [-h] [--name NAME] [--count {1,2,3}]
+greet.py: error: unrecognized arguments: --bad
+Exit code: 2
+
+Test 2: Invalid count
+usage: greet.py [-h] [--name NAME] [--count {1,2,3}]
+greet.py: error: argument --count: invalid choice: 5 (choose from 1, 2, 3)
+Exit code: 2
