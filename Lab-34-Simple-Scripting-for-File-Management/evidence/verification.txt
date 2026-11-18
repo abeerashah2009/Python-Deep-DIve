@@ -1,0 +1,39 @@
+===== Python Version =====
+Python 3.12.3
+
+===== Python Syntax Check =====
+Syntax check: PASSED
+
+===== Source Files =====
+total 24
+drwxrwxr-x 2 ubuntu ubuntu 4096 Nov 18 14:57 archive
+-rw-rw-r-- 1 ubuntu ubuntu   14 Nov 18 14:57 file1.txt
+-rw-rw-r-- 1 ubuntu ubuntu   14 Nov 18 14:57 file2.txt
+-rw-rw-r-- 1 ubuntu ubuntu   14 Nov 18 14:57 file3.txt
+-rw-rw-r-- 1 ubuntu ubuntu   14 Nov 18 14:57 file4.txt
+-rw-rw-r-- 1 ubuntu ubuntu   14 Nov 18 14:57 file5.txt
+
+===== Destination Files =====
+total 40
+-rw-rw-r-- 1 ubuntu ubuntu 14 Nov 18 14:58 file1.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Nov 18 14:58 file1_backup.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Nov 18 14:58 file2.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Nov 18 14:58 file2_backup.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Nov 18 14:58 file3.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Nov 18 14:58 file3_backup.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Nov 18 14:58 file4.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Nov 18 14:58 file4_backup.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Nov 18 14:58 file5.txt
+-rw-rw-r-- 1 ubuntu ubuntu 14 Nov 18 14:58 file5_backup.txt
+
+===== SHA256 Verification =====
+173f1e5e8739961af09972420e48b18426b1612c0ff1e539b2ad45c3f2566cfa  /home/ubuntu/lab/src/file1.txt
+173f1e5e8739961af09972420e48b18426b1612c0ff1e539b2ad45c3f2566cfa  /home/ubuntu/lab/dst/file1.txt
+173f1e5e8739961af09972420e48b18426b1612c0ff1e539b2ad45c3f2566cfa  /home/ubuntu/lab/dst/file1_backup.txt
+
+===== Diff Verification =====
+identical
+
+===== File Counts =====
+5
+10
