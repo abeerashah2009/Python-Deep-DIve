@@ -1,0 +1,30 @@
+LAB 39 - PYTHON STYLE AND PEP 8 CHECKS
+======================================
+
+Python Version:
+Python 3.12.3
+
+Flake8 Version:
+7.1.1 (mccabe: 0.7.0, pycodestyle: 2.12.1, pyflakes: 3.2.0) CPython 3.12.3 on
+Linux
+
+Black Version:
+black, 24.8.0 (compiled: yes)
+Python (CPython) 3.12.3
+
+autopep8 Version:
+autopep8 2.3.1 (pycodestyle: 2.12.1)
+
+Original Flake8 Violations:
+9
+
+Black Version Check:
+Black check passed.
+
+autopep8 Version Check:
+autopep8 check passed.
+
+Python Syntax Check:
+Syntax check passed.
+
+LMS Result: 100/100
