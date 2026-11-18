@@ -1,0 +1,4 @@
+Python syntax exit code: 0
+
+SQLite integrity:
+ok
