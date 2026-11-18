@@ -1,0 +1,11 @@
+2026-11-18 14:20:51,454 - DEBUG - This is a debug message.
+2026-11-18 14:20:51,455 - INFO - This is an info message.
+2026-11-18 14:20:51,455 - WARNING - This is a warning message.
+2026-11-18 14:20:51,455 - ERROR - This is an error message.
+2026-11-18 14:20:51,455 - CRITICAL - This is a critical message.
+2026-11-18 14:20:51,455 - ERROR - Division by zero error.
+Traceback (most recent call last):
+  File "/home/ubuntu/logging-lab/log_demo.py", line 18, in divide_numbers
+    result = a / b
+             ~~^~~
+ZeroDivisionError: division by zero
