@@ -1,0 +1,17 @@
+Lab 26: Decorators - Basic Usage
+Task 4: Caching Demonstration
+
+Command:
+python3 -c "
+import functools
+@functools.lru_cache(maxsize=None)
+def square(n):
+    print('computing', n); return n*n
+square(4); square(4); print(square.cache_info())"
+
+Output:
+computing 4
+CacheInfo(hits=1, misses=1, maxsize=None, currsize=1)
+
+Result: PASSED
+The second call used the cached result.

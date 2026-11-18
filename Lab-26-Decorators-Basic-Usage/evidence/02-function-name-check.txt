@@ -1,0 +1,11 @@
+Lab 26: Decorators - Basic Usage
+functools.wraps Verification
+
+Command:
+python3 -c "import deco; assert deco.say_hello.__name__ == 'say_hello'; print(deco.say_hello.__name__)"
+
+Output:
+say_hello
+
+Result: PASSED
+The original function name was preserved.

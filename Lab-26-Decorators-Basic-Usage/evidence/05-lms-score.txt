@@ -1,0 +1,10 @@
+Lab 26: Decorators - Basic Usage
+
+LMS Evaluation:
+Status: Lab Passed
+Score: 100 / 100
+
+Time Spent Today: 29 minutes
+Total Time: 12 hours 26 minutes
+
+Result: PASSED

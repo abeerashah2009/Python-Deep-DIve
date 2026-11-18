@@ -1,0 +1,12 @@
+Lab 26: Decorators - Basic Usage
+Task 3: Applying the Decorator
+
+Command:
+python3 deco.py
+
+Output:
+Start
+Hello, Alice!
+End
+
+Result: PASSED
