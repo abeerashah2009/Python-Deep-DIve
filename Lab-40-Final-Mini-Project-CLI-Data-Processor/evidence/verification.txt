@@ -1,0 +1,51 @@
+==========================================
+LAB 40 - CLI DATA PROCESSOR
+PRACTICAL VERIFICATION EVIDENCE
+==========================================
+
+===== LMS RESULT =====
+Score: 100 / 100
+Status: PASSED
+
+===== PYTHON VERSION =====
+Python 3.12.3
+
+===== REQUESTS VERSION =====
+Version: 2.32.3
+
+===== PYTHON SYNTAX CHECK =====
+PASS
+
+===== REQUIRED FUNCTIONS =====
+11:def fetch_data(source):
+22:def save_data_to_file(data, file_path):
+28:def parse_arguments():
+37:def validate(data):
+42:def main():
+
+===== LIVE API RECORD COUNT =====
+Records: 100
+
+===== LOCAL FILE TEST =====
+Records: 2
+
+===== FILE URL TEST =====
+Records: 2
+
+===== ERROR HANDLING =====
+Invalid URL: Exit code 1; no output file created
+Invalid JSON: Exit code 1; no output file created
+
+===== CLI HELP =====
+usage: data_processor.py [-h] [--url URL] --out OUT
+
+CLI Data Processor
+
+options:
+  -h, --help  show this help message and exit
+  --url URL   API URL, file:// URL or local file path to read JSON from
+  --out OUT   Path to save JSON data
+
+==========================================
+END OF LAB 40 EVIDENCE
+==========================================
