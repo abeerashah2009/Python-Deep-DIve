@@ -1,0 +1,21 @@
+Lab 37 - BFS/DFS Implementation
+LMS Result: 100/100 - Passed
+
+===== Python Version =====
+Python 3.12.3
+
+===== Graph Structure =====
+{'A': ['B', 'C'], 'B': ['D', 'E'], 'C': ['F'], 'D': [], 'E': ['F'], 'F': []}
+
+===== Graph Nodes =====
+Nodes: 6
+
+===== BFS and DFS Output =====
+BFS order: A B C D E F
+DFS order: A B D E F C
+
+===== Syntax Check =====
+PASS
+
+===== Recursion Limit =====
+1000
