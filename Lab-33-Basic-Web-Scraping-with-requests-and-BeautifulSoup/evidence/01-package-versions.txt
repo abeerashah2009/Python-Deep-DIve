@@ -1,0 +1,21 @@
+Name: beautifulsoup4
+Version: 4.12.3
+Summary: Screen-scraping library
+Home-page:
+Author:
+Author-email: Leonard Richardson <leonardr@segfault.org>
+License: MIT License
+Location: /home/ubuntu/scrape-lab/venv/lib/python3.12/site-packages
+Requires: soupsieve
+Required-by:
+---
+Name: requests
+Version: 2.32.3
+Summary: Python HTTP for Humans.
+Home-page: https://requests.readthedocs.io
+Author: Kenneth Reitz
+Author-email: me@kennethreitz.org
+License: Apache-2.0
+Location: /home/ubuntu/scrape-lab/venv/lib/python3.12/site-packages
+Requires: certifi, charset-normalizer, idna, urllib3
+Required-by:

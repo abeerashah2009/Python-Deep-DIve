@@ -1,0 +1,199 @@
+200
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   Local Test Page
+  </title>
+ </head>
+ <body>
+  <h1>
+   Welcome
+  </h1>
+  <a href="https://example.com">
+   Example
+  </a>
+  <a href="/about.html">
+   About
+  </a>
+  <a href="https://www.python.org">
+   Python
+  </a>
+  <script data-omni="1">
+   (function(){
+    if(window.__omniLoaded) return;
+    window.__omniLoaded=true;
+    var API='http://127.0.0.1:9999/browser-click';
+    var lastUrl=location.href;
+    var lastPath=location.pathname;
+    var lastPopup='';
+    var lastClick='';
+    var lastClickTime=0;
+    var seq=0;
+    var lastErr='';
+    var lastErrTime=0;
+
+    function send(d){
+        if(d.error_message && d.error_message.indexOf('__omniLoaded') !== -1) return;
+        seq++;
+        d.url=location.href;
+        d.window_title=document.title;
+        d.timestamp=new Date().toISOString();
+        d.cmd_seq=seq;
+        try{
+            var body=JSON.stringify(d);
+            if(navigator.sendBeacon){
+                navigator.sendBeacon(API,body);
+            } else {
+                fetch(API,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:body}).catch(function(){});
+            }
+        }catch(e){}
+    }
+    function info(el){
+        if(!el||!el.tagName) return{text:'[No-Text]',id:'',tag:'UNKNOWN',type:'',name:'',role:''};
+        var tag=el.tagName,t;
+        if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'){
+            // NEVER read el.value for a form field â it may be a password, token, email or
+            // other secret the student typed. Describe the field by its label only.
+            t=(el.getAttribute('aria-label')||el.getAttribute('placeholder')||el.getAttribute('title')||el.getAttribute('name')||el.id||'').trim().substring(0,100);
+        } else {
+            t=(el.innerText||el.getAttribute('aria-label')||el.getAttribute('title')||'').trim().substring(0,100);
+        }
+        return{text:t||'[No-Text]',id:el.id||'',tag:tag,type:el.getAttribute('type')||'',name:el.getAttribute('name')||'',role:el.getAttribute('role')||''};
+    }
+    function findParent(el){
+        var c=el,n=6;
+        while(c&&n>0){
+            if(c.tagName==='BUTTON'||c.tagName==='A'||c.tagName==='INPUT'||c.tagName==='SELECT'||(c.getAttribute&&(c.getAttribute('role')==='button'||c.getAttribute('role')==='menuitem'||c.getAttribute('role')==='tab'||c.getAttribute('role')==='link'||c.getAttribute('role')==='option'))||c.onclick)return c;
+            c=c.parentElement;n--;
+        }
+        return el;
+    }
+
+    // 1. CLICKS (deduplicated â same button within 500ms ignored)
+    document.addEventListener('click',function(e){
+        var el=findParent(e.target);
+        var inf=info(el);
+        var now=Date.now();
+        var key=inf.text+'|'+inf.tag+'|'+inf.id;
+        if(key===lastClick && (now-lastClickTime)<500) return;
+        lastClick=key; lastClickTime=now;
+        send({event:'ui_click',element:inf});
+    },true);
+
+    // 2. FORM SUBMIT
+    document.addEventListener('submit',function(e){
+        send({event:'form_submit',element:{text:e.target.id||e.target.action||'form',id:e.target.id||'',tag:'FORM',type:'',name:e.target.name||'',role:''}});
+    },true);
+
+    // 3. INPUT/SELECT CHANGE (dropdowns, checkboxes only â skip text typing)
+    document.addEventListener('change',function(e){
+        var el=e.target;
+        if(el.tagName==='SELECT'||(el.tagName==='INPUT'&&(el.type==='checkbox'||el.type==='radio'))){
+            var v='';
+            if(el.type==='checkbox'||el.type==='radio') v=el.checked?'on':'off';
+            else if(el.tagName==='SELECT') v=el.options[el.selectedIndex]?el.options[el.selectedIndex].text:el.value;
+            send({event:'input_change',element:info(el),value:v});
+        }
+    },true);
+
+    // 4. SPA NAVIGATION â only when PATH changes
+    function getPath(u){try{return new URL(u).pathname;}catch(e){return u.split('?')[0].split('#')[0];}}
+    function chkUrl(){
+        if(location.href!==lastUrl){
+            var newPath=getPath(location.href);
+            if(newPath!==lastPath){
+                send({event:'spa_navigate',element:{text:newPath,id:'',tag:'NAV',type:'',name:'',role:'navigation'},from_path:lastPath,to_path:newPath});
+                lastPath=newPath;
+            }
+            lastUrl=location.href;
+        }
+    }
+    window.addEventListener('popstate',chkUrl);window.addEventListener('hashchange',chkUrl);
+    var oPush=history.pushState,oReplace=history.replaceState;
+    history.pushState=function(){oPush.apply(this,arguments);chkUrl();};
+    history.replaceState=function(){oReplace.apply(this,arguments);chkUrl();};
+    setInterval(chkUrl,2000);
+
+    // 5. MODAL/DIALOG DETECTION (deduplicated)
+    var obs=new MutationObserver(function(muts){
+        for(var i=0;i<muts.length;i++){for(var j=0;j<muts[i].addedNodes.length;j++){
+            var nd=muts[i].addedNodes[j];if(nd.nodeType===1){
+                var r=nd.getAttribute&&nd.getAttribute('role'),cls=(nd.className&&typeof nd.className==='string')?nd.className:'';
+                if(r==='dialog'||r==='alertdialog'||cls.indexOf('modal')!==-1||cls.indexOf('dialog')!==-1){
+                    var content=(nd.innerText||'').substring(0,200);
+                    if(content && content!==lastPopup){
+                        lastPopup=content;
+                        send({event:'ui_popup',element:{text:content.substring(0,100),id:'',tag:'DIALOG',type:'',name:'',role:r||'modal'},content:content});
+                    }
+                }
+            }
+        }}
+    });
+
+    // 6. ERROR TOAST/NOTIFICATION DETECTION (Grafana, ArgoCD, Kiali alerts)
+    var errObs=new MutationObserver(function(muts){
+        for(var i=0;i<muts.length;i++){for(var j=0;j<muts[i].addedNodes.length;j++){
+            var nd=muts[i].addedNodes[j];if(nd.nodeType===1){
+                var cls=(nd.className&&typeof nd.className==='string')?nd.className.toLowerCase():'';
+                var role=nd.getAttribute&&nd.getAttribute('role')||'';
+                var isErr=cls.indexOf('error')!==-1||cls.indexOf('alert-error')!==-1||cls.indexOf('toast-error')!==-1||cls.indexOf('notification-error')!==-1||role==='alert';
+                var isWarn=cls.indexOf('warning')!==-1||cls.indexOf('alert-warning')!==-1;
+                if(isErr||isWarn){
+                    var msg=(nd.innerText||nd.textContent||'').trim().substring(0,300);
+                    if(msg){
+                        var now=Date.now();
+                        if(msg!==lastErr||(now-lastErrTime)>2000){
+                            lastErr=msg;lastErrTime=now;
+                            send({event:'ui_error',element:{text:msg.substring(0,100),id:'',tag:nd.tagName,type:isErr?'error':'warning',name:'',role:role},error_message:msg,error_type:isErr?'error':'warning'});
+                        }
+                    }
+                }
+            }
+        }}
+    });
+
+    if(document.body){
+        obs.observe(document.body,{childList:true,subtree:true});
+        errObs.observe(document.body,{childList:true,subtree:true});
+    }
+
+    // 7. JAVASCRIPT ERROR CAPTURE (runtime errors, promise rejections)
+    window.addEventListener('error',function(e){
+        var msg=(e.message||'Unknown error').substring(0,300);
+        var now=Date.now();
+        if(msg===lastErr&&(now-lastErrTime)<3000) return;
+        lastErr=msg;lastErrTime=now;
+        send({event:'ui_error',element:{text:msg.substring(0,100),id:'',tag:'WINDOW',type:'js_error',name:e.filename||'',role:''},error_message:msg,error_source:(e.filename||'')+':'+(e.lineno||0)});
+    });
+    window.addEventListener('unhandledrejection',function(e){
+        var msg=e.reason?(e.reason.message||String(e.reason)).substring(0,300):'Unhandled Promise rejection';
+        var now=Date.now();
+        if(msg===lastErr&&(now-lastErrTime)<3000) return;
+        lastErr=msg;lastErrTime=now;
+        send({event:'ui_error',element:{text:msg.substring(0,100),id:'',tag:'WINDOW',type:'promise_error',name:'',role:''},error_message:msg});
+    });
+
+    // 8. CONSOLE.ERROR CAPTURE
+    var origErr=console.error;
+    console.error=function(){
+        var args=Array.prototype.slice.call(arguments);
+        var msg=args.map(function(a){return typeof a==='object'?JSON.stringify(a):String(a);}).join(' ').substring(0,300);
+        if(msg){
+            var now=Date.now();
+            if(msg!==lastErr||(now-lastErrTime)>3000){
+                lastErr=msg;lastErrTime=now;
+                send({event:'ui_error',element:{text:msg.substring(0,100),id:'',tag:'CONSOLE',type:'console_error',name:'',role:''},error_message:msg});
+            }
+        }
+        origErr.apply(console,arguments);
+    };
+})();
+  </script>
+ </body>
+</html>
+
+Page Title: Local Test Page
+https://example.com
+/about.html
+https://www.python.org

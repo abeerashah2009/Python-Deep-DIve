@@ -1,0 +1,10 @@
+/dev/core-mentorship/
+/dev/security/
+#python-network
+/about/help/
+/community/diversity/
+https://github.com/python/pythondotorg/issues
+https://status.python.org/
+/psf-landing/
+/about/legal/
+https://policies.python.org/python.org/Privacy-Notice/
