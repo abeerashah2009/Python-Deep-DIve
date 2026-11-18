@@ -1,0 +1,22 @@
+LAB 25 - INTENTIONAL TEST FAILURE
+
+Incorrect assertion:
+self.assertEqual(add(2, 2), 5)
+
+Command:
+python3 -m unittest discover -v
+
+Result:
+test_add ... ok
+test_add_wrong ... FAIL
+
+AssertionError: 4 != 5
+
+Ran 2 tests
+
+FAILED (failures=1)
+
+Exit code: 1
+
+This failure was intentional to demonstrate how unittest
+identifies an incorrect expected result.

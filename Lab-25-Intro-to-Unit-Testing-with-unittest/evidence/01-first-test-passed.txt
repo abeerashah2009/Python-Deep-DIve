@@ -1,0 +1,13 @@
+LAB 25 - FIRST UNIT TEST
+
+Command:
+python3 -m unittest discover -v
+
+Result:
+test_add (test_example.TestMath.test_add) ... ok
+
+Ran 1 test
+
+OK
+
+Exit code: 0

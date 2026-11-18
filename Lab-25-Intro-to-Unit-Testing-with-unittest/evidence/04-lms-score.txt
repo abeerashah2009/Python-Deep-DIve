@@ -1,0 +1,19 @@
+LAB 25 - LMS EVALUATION
+
+Lab Name:
+Intro to Unit Testing with unittest
+
+Evaluated by:
+Al Baari
+
+Score:
+100 / 100
+
+Status:
+PASSED
+
+Total Time:
+12h 39m
+
+Time Spent Today:
+16m

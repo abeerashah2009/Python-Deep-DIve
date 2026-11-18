@@ -1,0 +1,17 @@
+LAB 25 - FINAL UNIT TEST RESULTS
+
+Correct assertion:
+self.assertEqual(add(2, 2), 4)
+
+Command:
+python3 -m unittest discover -v
+
+Result:
+test_add ... ok
+test_add_wrong ... ok
+
+Ran 2 tests
+
+OK
+
+Exit code: 0
