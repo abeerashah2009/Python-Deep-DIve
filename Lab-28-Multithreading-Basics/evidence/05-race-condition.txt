@@ -1,0 +1,5 @@
+Race Condition and Lock Demonstration
+
+Expected: 400000
+Without lock: 100003
+With lock: 400000

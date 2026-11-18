@@ -1,0 +1,5 @@
+Lab 28 - Multithreading Basics
+LMS Score: 100 / 100
+Status: PASSED
+Evaluator: Al Baari
+Date: 18 November 2026
