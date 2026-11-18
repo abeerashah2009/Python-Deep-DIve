@@ -1,0 +1,23 @@
+===== Python Version =====
+Python 3.12.3
+
+===== Collections Module =====
+['ChainMap', 'Counter', 'OrderedDict', 'UserDict', 'UserList', 'UserString', 'defaultdict', 'deque', 'namedtuple']
+
+===== deque and Counter Imports =====
+deque and Counter imports: PASSED
+
+===== Syntax Check =====
+Syntax check: PASSED
+
+===== Required References =====
+9
+
+===== Final Execution =====
+Popped from the right: task2
+Popped from the left: task0
+Remaining deque: deque(['task1'])
+Last 3 items: deque([2, 3, 4], maxlen=3)
+Word Count: Counter({'apple': 3, 'orange': 2, 'banana': 1})
+Most Common Words: [('apple', 3), ('orange', 2)]
+Banana after update: 3
