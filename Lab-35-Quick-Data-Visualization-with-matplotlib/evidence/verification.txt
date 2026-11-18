@@ -1,0 +1,21 @@
+===== Python Version =====
+Python 3.12.3
+
+===== Matplotlib Version =====
+3.9.2
+
+===== Virtual Environment Pip =====
+pip 24.0 from /home/ubuntu/quick-plot/venv/lib/python3.12/site-packages/pip (python 3.12)
+
+===== Syntax Check =====
+Syntax check: PASSED
+
+===== PNG Verification =====
+/home/ubuntu/quick-plot/plot.png: PNG image data, 640 x 480, 8-bit/color RGBA, non-interlaced
+-rw-rw-r-- 1 ubuntu ubuntu 21K Nov 18 15:12 /home/ubuntu/quick-plot/plot.png
+
+===== Backend and Data =====
+Backend: Agg
+X points: 6
+Y points: 6
+Data points match: True
