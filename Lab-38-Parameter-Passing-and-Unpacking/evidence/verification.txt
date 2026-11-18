@@ -1,0 +1,26 @@
+===== Lab 38: Parameter Passing & Unpacking =====
+Python Version:
+Python 3.12.3
+
+LMS Result:
+Score: 100/100
+Status: Passed
+
+Python Syntax Check:
+Syntax check passed
+
+Practical Output:
+add_numbers(1, 2, 3, 4, 5) = 15
+--- show_info ---
+name: Alice
+age: 30
+city: New York
+sum_numbers(*numbers) = 10
+--- print_kwargs(**data) ---
+name: John
+age: 25
+--- show_info(**info) ---
+occupation: Engineer
+country: USA
+describe(*numbers, **info) = (4, ['country', 'occupation'])
+All tests passed
