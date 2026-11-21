@@ -1,0 +1,30 @@
+PYTHON LAB 07: USING LOOPS (FOR LOOP)
+
+1. Python Version:
+Python 3.12.3
+
+2. Script:
+greeting_script.py
+
+3. Names List:
+Alice, Bob, Charlie
+
+4. Program Execution:
+Command: python3 greeting_script.py
+
+Output:
+Hello, Alice!
+Hello, Bob!
+Hello, Charlie!
+
+5. Output Line Count:
+Command: python3 greeting_script.py | wc -l
+
+Output:
+3
+
+6. Syntax Validation:
+Command: python3 -m py_compile greeting_script.py
+
+Result:
+Python syntax PASS
